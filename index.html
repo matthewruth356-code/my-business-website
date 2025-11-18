@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ruth Graphics — Home</title>
+  <style>
+    /* Simple styling so it looks nice without extra files */
+    :root{--accent:#8e44ad;--bg:#f7f7f7;--text:#111}
+    *{box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;color:var(--text);background:var(--bg)}
+    .container{max-width:900px;margin:0 auto;padding:20px}
+    header{background:#fff;border-bottom:1px solid #e6e6e6;padding:12px 0}
+    header .top{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.2rem}
+    nav a{margin-left:12px;text-decoration:none;color:#333}
+    .hero{padding:40px 20px;text-align:center;background:white;margin:18px 0;border-radius:6px}
+    .hero h1{margin:0 0 8px;font-size:1.6rem}
+    .btn{display:inline-block;padding:10px 16px;background:var(--accent);color:white;text-decoration:none;border-radius:4px;margin-top:10px}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    .card{background:white;padding:14px;border-radius:6px;flex:1;min-width:200px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+    footer{padding:18px 0;text-align:center;font-size:0.9rem;color:#666}
+    form label{display:block;margin-bottom:10px}
+    input,textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px}
+    button{padding:10px 14px;background:var(--accent);color:#fff;border:0;border-radius:4px;cursor:pointer}
+    @media (max-width:700px){
+      .features{flex-direction:column}
+      header .top{flex-direction:column;gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <a class="logo" href="#">YourBusiness</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Welcome to Ruth Graphics and logo design</h1>
+      <<img src="banner.jpg" alt="Business banner" style="width:100%; border-radius:6px; margin:15px 0;">
+
+<h3>Navigation</h3>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+
+      <p>We help bring your brand to life with creative and professional logo designs.</p>
+      <a class="btn" href="#contact">Get a Quote</a>
+    </section>
+
+    <section id="about" style="margin-bottom:18px">
+      <h2>About Us</h2>
+      <p>We deal in creative and professional logo design services to help your brand stand out.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="features">
+        <div class="card">
+          <h3>Service 1</h3>
+          <p>we offer creative logo design tailored to your brand.</p>
+        </div>
+        <div class="card">
+          <h3>Service 2</h3>
+          <p>Short description.</p>
+        </div>
+        <div class="card">
+          <h3>Service 3</h3>
+          <p>Short description.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-bottom:40px">
+      <h2>Contact Us</h2>
+      <p>08121800372</p>
+
+      <!-- Simple contact form that opens the user's email app -->
+      <form action="mailto:youremail@example.com" method="GET" enctype="text/plain" onsubmit="alert('Your email app will open so you can send the message. If nothing happens, replace the email in the form action with your real email address.');">
+        <label>
+            Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p style="margin-top:12px">Or email: <strong>matthewruth356@gmail.com</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ruth Graphics All rights reserved.</p>
+    </div>
+  </footer>
+<footer>
+  <p>&copy; <span id="year"></span> Ruth Graphics. All rights reserved.</p>
+  <p>Contact: <a href="mailto:matthewruth356@gmail.com">matthewruth356@gmail.com</a></p>
+</footer>
+
+<script>
+    // Small script: put current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
